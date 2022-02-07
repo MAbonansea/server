@@ -1345,11 +1345,22 @@
 #define	PID_MUT_LEATHER				 		(25546)
 #define	PID_MUT_METAL				 		(25547)
 
-#define   PID_PPSH                          (25561)
+#define   PID_GHL_LEATHER                   (25561)
 #define   PID_SPAZ12                        (25454)
 #define   PID_AK47                          (25562)
 #define   PID_AK94                          (25456)
-#define   PID_CANNIBAL                      (25457)
+#define PID_GHL_LEATHER                     (25549)
+#define PID_GHL_SCAV_LEATHER                (25550)                     
+#define   PID_GHL_COMBAT_ROBES              (25551)
+#define   PID_GHL_SCRAP_RIFLE               (25552)  
+#define  PID_GHL_SCRAP_LASER_CARBINE        (25553)
+#define  PID_GHL_SCRAP_LASER_TRI_ASSAULT    (25554)
+#define  PID_GHL_SCRAP_LASER_SHOTGUN        (25555)
+#define  PID_GHL_SCRAP_CROSSBOW             (25556)
+#define  PID_GHL_SCRAP_LAUNCHER             (25557)
+#define  PID_GHL_SCRAP_BURST_PISTOL         (25558)
+#define  PID_GHL_SCRAP_TRIPLE_SHOTGUN       (25559)
+#define PID_GHL_SCRAP_SMG                   (25560)
 
 /*
 PID_BONES
