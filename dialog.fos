@@ -1579,12 +1579,12 @@ void r_changeRaceRobot_Asault(Critter& player,Critter@ npc, int timeout) {
          revertOtherShape(player);
         player.StatBase[MODE_ROBOT]= 2;
         player.StatBase[ST_LUCK_EXT] -=4;
-        player.StatBase[ST_PERCEPTION_EXT] -=4;
-        player.StatBase[ST_ACTION_POINTS_EXT] -=2;
-        player.StatBase[ST_MAX_LIFE_EXT] += 100;
+        player.StatBase[ST_PERCEPTION_EXT] +=4;
+        player.StatBase[ST_ACTION_POINTS_EXT] +=2;
+        player.StatBase[ST_MAX_LIFE_EXT] += 200;
         for (int i = ST_NORMAL_RESIST; i < ST_POISON_RESISTANCE; i++)
         {
-            player.StatBase[STAT_EXT_BEGIN + i] += 20;
+            player.StatBase[STAT_EXT_BEGIN + i] += 25;
         };
 
          for (int i = ST_NORMAL_ABSORB; i < ST_NORMAL_RESIST; i++)
@@ -1607,7 +1607,7 @@ void r_changeRaceRobot_Melee(Critter& player,Critter@ npc, int timeout) {
         player.StatBase[ST_ARMOR_CLASS_EXT] +=50;
         player.StatBase[ST_MELEE_DAMAGE_EXT] += 50;
         player.StatBase[SK_SNEAK] += 150;
-        player.StatBase[ST_MAX_LIFE_EXT] +=50;
+        player.StatBase[ST_MAX_LIFE] +=50;
         for (int i = ST_NORMAL_RESIST; i < ST_POISON_RESISTANCE; i++)
         {
             player.StatBase[STAT_EXT_BEGIN + i] += 5;
