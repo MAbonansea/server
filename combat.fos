@@ -2008,6 +2008,10 @@ void ApplyDamage(AttackStruct& attack, Critter& target, uint rounds, bool isCrit
             totalDmg *= 1.5;
 		if(attack.Attacker.Trait[TRAIT_KAMIKAZE] != 0)
 			totalDmg *= 1.1;
+            int randomGhoul = Random(0,9);
+        if (attack.Attacker.Perk[PE_GHOUL_PLAYER] > 0 && randomGhoul > 7) {
+            totalDmg *= 2;
+        }
     }
 
 	//if(!isPrimitiveWeapon) totalDmg=0;

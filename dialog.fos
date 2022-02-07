@@ -1180,39 +1180,6 @@ bool d_CheckDoctor2(Critter& player, Critter@ npc, int val)
     return CheckProfession(player, PE_PROFESSION_DOCTOR, 2);
 }
 
-// FOnline: After Times
-
-// check Barman
-
-
-
-
-// check Ironmaster
-
-
-// ckeck Ironworker
-
-bool d_CheckIronworker0(Critter& player, Critter@ npc, int val)
-{
-    return CheckProfession(player, PE_PROFESSION_IRONWORKER, 0);
-}
-
-bool d_CheckIronworker1(Critter& player, Critter@ npc, int val)
-{
-    return CheckProfession(player, PE_PROFESSION_IRONWORKER, 1);
-}
-
-bool d_CheckIronworker2(Critter& player, Critter@ npc, int val)
-{
-    return CheckProfession(player, PE_PROFESSION_IRONWORKER, 2);
-}
-
-// @}
-
-/*@}*/
-
-// undocumented
-// for Shren child, in Hub
 void dlg_ShrenRumour(Critter& player, Critter@ npc, string@ text)
 {
     if(!IS_DIALOG_GENERATED(text))
@@ -1717,6 +1684,7 @@ void r_changeRaceHuman(Critter& cr, Critter@ npc, int timeout) {
     cr.PerkBase[PE_CLAW_PLAYER] = 0;
     cr.PerkBase[PE_TERMINATOR] = 0;
     cr.PerkBase[PE_MUTATE] = 0;
+     cr.PerkBase[PE_GHOUL_PLAYER] = 0;
     cr.ChangeCrType(cr.StatBase[ST_BASE_CRTYPE]);
        
     return;
@@ -1747,13 +1715,49 @@ void r_changeRaceMutante(Critter& cr, Critter@ npc, int timeout) {
         cr.StatBase[ST_MAX_LIFE] = (cr.Stat[ST_MAX_LIFE] * 2) + 50;
 }
 
-void r_changeRaceGhoul(Critter& cr, Critter@ npc, int timeout) { 
+void r_changeRaceGhoulSniper(Critter& cr, Critter@ npc, int timeout) { 
     cr.PerkBase[PE_ALIEN_PLAYER] = 0;
     cr.PerkBase[PE_GECKO_PLAYER] = 0;
     cr.PerkBase[PE_CLAW_PLAYER] = 0;
     cr.PerkBase[PE_TERMINATOR] = 0;
     cr.PerkBase[PE_MUTATE] = 0;
+    cr.PerkBase[PE_GHOUL_PLAYER] = 1;
+    cr.StatBase[ST_BASE_CRTYPE] = 28;
+    cr.StatBase[ST_MAX_LIFE] -= 50; 
 
+         for (int i = ST_NORMAL_RESIST; i < ST_POISON_RESISTANCE; i++)
+        {
+            cr.StatBase[i] += 10;
+        };
+
+         for (int i = ST_NORMAL_ABSORB; i < ST_NORMAL_RESIST; i++)
+        {
+            cr.StatBase[i] +=  2;
+        };
+         cr.ChangeCrType(cr.StatBase[ST_BASE_CRTYPE]);
+
+}
+
+void r_changeRaceGhoulSG(Critter& cr, Critter@ npc, int timeout) { 
+    cr.PerkBase[PE_ALIEN_PLAYER] = 0;
+    cr.PerkBase[PE_GECKO_PLAYER] = 0;
+    cr.PerkBase[PE_CLAW_PLAYER] = 0;
+    cr.PerkBase[PE_TERMINATOR] = 0;
+    cr.PerkBase[PE_MUTATE] = 0;
+    cr.PerkBase[PE_GHOUL_PLAYER] = 1;
+    cr.StatBase[ST_BASE_CRTYPE] = 79;
+    cr.StatBase[ST_MAX_LIFE] -= 50; 
+
+         for (int i = ST_NORMAL_RESIST; i < ST_POISON_RESISTANCE; i++)
+        {
+            cr.StatBase[i] += 10;
+        };
+
+         for (int i = ST_NORMAL_ABSORB; i < ST_NORMAL_RESIST; i++)
+        {
+            cr.StatBase[i] +=  2;
+        };
+         cr.ChangeCrType(cr.StatBase[ST_BASE_CRTYPE]);
 
 }
 

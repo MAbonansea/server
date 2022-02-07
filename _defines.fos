@@ -764,8 +764,8 @@
 
 // FOnline: After Times
 #define PE_VAMPIRE                               (360)
-#define PE_CPU_II                         (361)
-#define PE_PROFESSION_IRONWORKER                 (362)
+#define PE_CPU_II                                (361)
+#define PE_GHOUL_PLAYER                          (362)
 
 /* zamienione profesje
 #define PE_PROFESSION_MORDINO_CHEMIST            (360)
