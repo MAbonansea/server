@@ -1794,16 +1794,6 @@ void setDrugs(Critter& player) {
        6,
        PID_IMPLANT_INTELLIGENCE,
        6,
-       PID_IMPLANT_AGILITY,
-       6,
-       PID_IMPLANT_LUCK,
-       6,
-       PID_IMPLANT_DERMAL,
-       2,
-       PID_IMPLANT_PHOENIX,
-       2,
-       PID_IMPLANT_NEMEAN,
-       2,
        PID_MENTATS,
        5,
        PID_BUFFOUT,
@@ -2238,10 +2228,6 @@ uint searchForImpInv(Critter& cr, array<int> limit) {
         if( currentSP - currentInvSP < 0 ) {
             return DIALOG_END;
         };
-
-        if( currentCB - currentInvCB < 0 ) {
-            return DIALOG_END;
-        }
 		
         array<int>  impSP = {
         ST,
@@ -2257,18 +2243,6 @@ uint searchForImpInv(Critter& cr, array<int> limit) {
            currentSP =  currentSP - impSP[i] ;
         };
         
-        array<int>  impCB = {
-        DER,
-        PHO,
-        NEN
-        };
-
-        for (int x = 0; x < impCB.length(); x++)
-        {
-           currentCB =   currentCB - impCB[x];
-        };
-        Log("currrent SP" + currentSP );
-        Log("currrent CB" + currentCB );
 			if( 7 > currentSP) {
             Log("en SP LOOP");
             int index = 0;
@@ -2279,35 +2253,7 @@ uint searchForImpInv(Critter& cr, array<int> limit) {
                    }
                     
             }
-
         }
-        if(5 > currentCB) {
-            Log("en SP LOOP");
-             if (impCB[2] > 0) {
-              cr.PerkBase[PE_NEMEAN_ARMOR] = impCB[2];
-        };
-
-
-        if ( impCB[0] == 1 ) {
-             cr.PerkBase[PE_DERMAL_IMPACT] = 1;
-        };
-        if ( impCB[1] == 1) {
-            cr.PerkBase[PE_PHOENIX_IMPLANTS] = 1;
-        };
-
-
-        if(impCB[1] == 2) {
-            cr.PerkBase[PE_PHOENIX_IMPLANTS_ENH] = 1;
-            cr.PerkBase[PE_PHOENIX_IMPLANTS] = 1;
-        };
-
-        if(impCB[0] == 2) {
-            cr.PerkBase[PE_DERMAL_IMPACT] = 1;
-            cr.PerkBase[PE_DERMAL_IMPACT_ENH] = 1;
-        };
-        
-		
-    };
         return DIALOG_END;
 }
 

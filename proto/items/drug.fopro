@@ -451,3 +451,18 @@ Cost=1
 Material=7
 CraftLevel=1
 
+[Proto]
+ProtoId=25562
+Type=2
+PicMap=art\items\drugs\jet.fofrm
+PicInv=art\inven\jet.frm
+Flags=150994974
+Stackable=1
+Weight=51
+Volume=1
+SoundId=48
+Cost=350
+Material=1
+NeedBlueprint=9792
+CraftLevel=2
+

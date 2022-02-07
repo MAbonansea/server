@@ -1361,6 +1361,7 @@
 #define  PID_GHL_SCRAP_BURST_PISTOL         (25558)
 #define  PID_GHL_SCRAP_TRIPLE_SHOTGUN       (25559)
 #define PID_GHL_SCRAP_SMG                   (25560)
+#define PID_CANNIBAL                        (25562)
 
 /*
 PID_BONES
