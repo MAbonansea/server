@@ -143,8 +143,6 @@ bool critter_check_move_item(Critter& cr, Item& item, uint8 toSlot, Item@ itemSw
         if(toSlot == SLOT_TROPHY && cr.IsPlayer())           // add ST_BASE_CRTYPE here?
             return(false);
     }
-
-    Log("VALOR:  paso por aca");
     return true;
 }
 
@@ -189,7 +187,6 @@ void critter_move_item(Critter& cr, Item& item, uint8 fromSlot)
 
     // Armor changing
     if(item.GetType() == ITEM_TYPE_ARMOR && (fromSlot == SLOT_ARMOR || toSlot == SLOT_ARMOR))
-    Log("trigger cambio");
     {
         if(GetCritterAnimType(cr.CrType) != ANIM_TYPE_3D)
         {

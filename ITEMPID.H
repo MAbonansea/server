@@ -1345,9 +1345,9 @@
 #define	PID_MUT_LEATHER				 		(25546)
 #define	PID_MUT_METAL				 		(25547)
 
-#define   PID_PPSH                          (25453)
+#define   PID_PPSH                          (25561)
 #define   PID_SPAZ12                        (25454)
-#define   PID_AK47                          (25455)
+#define   PID_AK47                          (25562)
 #define   PID_AK94                          (25456)
 #define   PID_CANNIBAL                      (25457)
 

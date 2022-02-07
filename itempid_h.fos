@@ -81,7 +81,7 @@ enum ArmorCloth
     PID_CLOTHES_BOXER                                       = 774,
     PID_SF_COMBAT_JACKET                            = 775,
     PID_MORDINO_METAL_JACKET                        = 776,
-    PID_CLOTHES_GENERIC3                            = 777
+    PID_CLOTHES_GENERIC3                            = 777,
 };
 
 /**********
@@ -709,6 +709,27 @@ enum ContainerMisc
     PID_TOBACCO_BENCH                                       = 9636,
     PID_CAMPFIRE                                            = 9913
 };
+
+enum GhoulWeapon 
+{
+    PID_GHL_SCRAP_LASER_TRI_ASSAULT,
+    PID_GHL_SCRAP_LASER_SHOTGUN = 25555,
+    PID_GHL_SCRAP_CROSSBOW = 25556,
+    PID_GHL_SCRAP_LAUNCHER = 25557,
+    PID_GHL_SCRAP_BURST_PISTOL = 25558,
+    PID_GHL_SCRAP_TRIPLE_SHOTGUN = 25559,
+    PID_GHL_SCRAP_SMG = 25560,
+    PID_GHL_SCRAP_RIFLE = 25552,
+    PID_GHL_SCRAP_LASER_CARBINE = 25553,
+}
+{
+    enum GhoulArmor
+    {
+        PID_GHL_LEATHER = 25549,
+        PID_GHL_SCAV_LEATHER = 25550,
+        PID_GHL_COMBAT_ROBES = 25551
+    }
+}
 
 /********
 * MISC *
