@@ -1,0 +1,55 @@
+﻿Build started 5/2/2022 02:16:56.
+     1>Project "D:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\Backend\Backend.vcxproj" on node 8 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\Backend.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\3rdParty\StlPort /ID:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\3rdParty\angelscript\include /ID:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\3rdParty\libmysql\include /ID:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\3rdParty\include /ID:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\3rdParty\libcurl\include /ID:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\3rdParty\jsoncpp\include /Zi /nologo /W3 /WX- /Od /Oy- /D __SERVER /D _USRDLL /D BACKEND_EXPORTS /D CURL_STATICLIB /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /MT /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yc"StdAfx.h" /Fp"Debug\Backend.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         compiled as server
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\3rdParty\StlPort /ID:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\3rdParty\angelscript\include /ID:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\3rdParty\libmysql\include /ID:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\3rdParty\include /ID:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\3rdParty\libcurl\include /ID:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\3rdParty\jsoncpp\include /Zi /nologo /W3 /WX- /Od /Oy- /D __SERVER /D _USRDLL /D BACKEND_EXPORTS /D CURL_STATICLIB /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /MT /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yu"StdAfx.h" /Fp"Debug\Backend.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Backend.cpp Config.cpp datatables.cpp Faction.cpp FactionsData.cpp FactionsInfo.cpp FactionsNews.cpp GameText.cpp helpers.cpp ilog.cpp Log.cpp Players.cpp RefCount.cpp ScriptJson.cpp
+         ScriptJson.cpp
+         RefCount.cpp
+         Players.cpp
+         Log.cpp
+         ilog.cpp
+         helpers.cpp
+         GameText.cpp
+         FactionsNews.cpp
+         FactionsInfo.cpp
+     1>FactionsInfo.cpp(187): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\../include/stdio.h(325) : see declaration of 'sscanf'
+         FactionsData.cpp
+         Faction.cpp
+         datatables.cpp
+         Config.cpp
+         Backend.cpp
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\3rdParty\StlPort /ID:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\3rdParty\angelscript\include /ID:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\3rdParty\libmysql\include /ID:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\3rdParty\include /ID:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\3rdParty\libcurl\include /ID:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\3rdParty\jsoncpp\include /Zi /nologo /W3 /WX- /Od /Oy- /D __SERVER /D _USRDLL /D BACKEND_EXPORTS /D CURL_STATICLIB /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /MT /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt dllmain.cpp
+         dllmain.cpp
+         compiled as server
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\Backend.dll.embed.manifest.res" Debug\Backend_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\Debug\Backend.dll" /INCREMENTAL /NOLOGO /LIBPATH:..\3rdParty\StlPort /LIBPATH:D:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\3rdParty\angelscript\lib /LIBPATH:D:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\3rdParty\libmysql\lib /LIBPATH:D:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\3rdParty\jsoncpp\lib libmysql.lib libcurl_a.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Backend.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\Debug\Backend.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\Debug\Backend.lib" /MACHINE:X86 /DLL Debug\Backend.dll.embed.manifest.res
+         Debug\Backend.obj
+         Debug\Config.obj
+         Debug\datatables.obj
+         Debug\dllmain.obj
+         Debug\Faction.obj
+         Debug\FactionsData.obj
+         Debug\FactionsInfo.obj
+         Debug\FactionsNews.obj
+         Debug\GameText.obj
+         Debug\helpers.obj
+         Debug\ilog.obj
+         Debug\Log.obj
+         Debug\Players.obj
+         Debug\RefCount.obj
+         Debug\ScriptJson.obj
+         Debug\stdafx.obj
+     1>LINK : fatal error LNK1104: cannot open file 'libcurl_a.lib'
+     1>Done Building Project "D:\Descarga\fonline_aftertimes_s2_server_tools\Server\extensions\Backend\Backend.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.45

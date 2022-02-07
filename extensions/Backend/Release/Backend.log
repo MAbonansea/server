@@ -1,0 +1,25 @@
+﻿Build started 7/2/2022 07:02:22.
+     1>Project "C:\Users\Miguel Bonansea\Documents\GitHub\fonline_aftertimes_s2_server_tools (1)\Server\extensions\Backend\Backend.vcxproj" on node 8 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\Backend.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         Backend.vcxproj -> C:\Users\Miguel Bonansea\Documents\GitHub\fonline_aftertimes_s2_server_tools (1)\Server\extensions\Release\Backend.dll
+       PostBuildEvent:
+         cd "C:\Users\Miguel Bonansea\Documents\GitHub\fonline_aftertimes_s2_server_tools (1)\Server\extensions\Release\"
+         copy "Backend.dll" "../../scripts"
+         
+         :VCEnd
+                 1 archivo(s) copiado(s).
+       FinalizeBuildStatus:
+         Deleting file "Release\Backend.unsuccessfulbuild".
+         Touching "Release\Backend.lastbuildstate".
+     1>Done Building Project "C:\Users\Miguel Bonansea\Documents\GitHub\fonline_aftertimes_s2_server_tools (1)\Server\extensions\Backend\Backend.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.12

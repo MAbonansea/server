@@ -1,0 +1,12 @@
+﻿Build started 5/2/2022 03:44:09.
+     1>Project "C:\Users\Miguel Bonansea\Documents\GitHub\fonline_aftertimes_s2_server_tools (1)\Server\scripts\solution\Mapper.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\Mapper.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       FinalizeBuildStatus:
+         Deleting file "Release\Mapper.unsuccessfulbuild".
+         Touching "Release\Mapper.lastbuildstate".
+     1>Done Building Project "C:\Users\Miguel Bonansea\Documents\GitHub\fonline_aftertimes_s2_server_tools (1)\Server\scripts\solution\Mapper.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.02

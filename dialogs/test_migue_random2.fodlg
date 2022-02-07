@@ -1,0 +1,38 @@
+[comment]
+
+
+[data]
+lang=engl
+
+[dialog]
+&
+1 1000 None 0 #
+2 1010 @
+2 2000 None 0 #
+0 2010 R _script dialog@r_GiveRandomItemFromList 1 0 #
+0 2020 R _script dialog@r_checkMaxImp 1 0 #
+0 2030 R _script dialog@r_changeRaceClaw 1 0 #
+0 2040 R _script dialog@r_changeRaceRobot_Asault 1 0 #
+0 2050 R _script dialog@r_changeRaceRobot_Melee 1 0 #
+0 2060 R _script dialog@r_changeRaceGhoulSG 1 0 #
+0 2070 R _script dialog@r_changeRaceGhoulSniper 1 0 #
+0 2080 R _script dialog@r_changeRaceMutante 1 0 #
+0 2090 @
+
+
+
+
+[engl]
+{100}{}{Event Teleporter}
+{1000}{}{Preddialogue settings}
+{1010}{}{ }
+{2000}{}{Que queres ?}
+{2010}{}{Random Loot}
+{2020}{}{Imp y dorgita}
+{2030}{}{Quiero ser un Garra}
+{2040}{}{Quiero ser Robot de Asalto}
+{2050}{}{Quiero ser un Robot Corredor}
+{2060}{}{Quiero ser un Zombie Corredor}
+{2070}{}{Quiero ser un Zombie Asalto}
+{2080}{}{Quiero ser un Mutante}
+{2090}{}{Salir.}

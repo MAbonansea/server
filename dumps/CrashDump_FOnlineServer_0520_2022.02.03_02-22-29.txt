@@ -1,0 +1,179 @@
+Application
+	Name        FOnlineServer
+	Version     0520
+	OS          6.2.9200 ()
+	Timestamp   2022.02.03 02:22:29
+
+Exception
+	Code      EXCEPTION_ACCESS_VIOLATION
+	Address   0x00529CD0
+	Flags     0x0
+	Info      Attempted to read to an 0x00000298
+
+Thread 'Main' (17808, current)
+	FOnlineServer, public: unsigned long * __thiscall asCArray<unsigned long>::AddressOf(void) + 0
+	FOnlineServer, public: void __thiscall asCContext::CallScriptFunction(class asCScriptFunction *) + 30
+	FOnlineServer, public: void __thiscall asCContext::CallInterfaceMethod(class asCScriptFunction *) + 240
+	FOnlineServer, public: void __thiscall asCContext::ExecuteNext(void) + 5924
+	FOnlineServer, public: virtual int __thiscall asCContext::Execute(void) + 521
+	FOnlineServer, bool __cdecl Script::RunPrepared(void) + 217
+	FOnlineServer, public: bool __thiscall Critter::ParseScript(char const *,bool) + 140
+	FOnlineServer, public: class Npc * __thiscall CritterManager::CreateNpc(unsigned short,unsigned int,int *,unsigned int,int *,char const *,class Map *,unsigned short,unsigned short,unsigned char,bool) + 817
+	FOnlineServer, public: bool __thiscall Map::Generate(void) + 700
+	FOnlineServer, public: class Location * __thiscall MapManager::CreateLocation(unsigned short,unsigned short,unsigned short,unsigned int) + 570
+	FOnlineServer, public: bool __thiscall MapManager::GenerateWorld(char const *,int) + 447
+	FOnlineServer, public: static bool __cdecl FOServer::NewWorld(void) + 27
+	FOnlineServer, public: static bool __cdecl FOServer::InitReal(void) + 1084
+	FOnlineServer, public: static bool __cdecl FOServer::Init(void) + 22
+	FOnlineServer, void __cdecl GameLoopThread(void *) + 10
+	FOnlineServer, void * __cdecl ThreadBeginExecution(void *) + 44
+	FOnlineServer, _ptw32_threadStart@4 + 97
+	FOnlineServer, __endthreadex + 58
+	FOnlineServer, __endthreadex + 196
+	KERNEL32, BaseThreadInitThunk + 25
+	ntdll, RtlGetAppContainerNamedObjectPath + 286
+	ntdll, RtlGetAppContainerNamedObjectPath + 238
+
+Thread 'GUI' (2716)
+	win32u, NtUserMsgWaitForMultipleObjectsEx + 12
+	USER32, MsgWaitForMultipleObjectsEx + 76
+	USER32, MsgWaitForMultipleObjects + 31
+	FOnlineServer, int __cdecl fl_wait(double) + 665
+	FOnlineServer, public: static double __cdecl Fl::wait(double) + 23
+	FOnlineServer, public: static int __cdecl Fl::wait(void) + 33
+	FOnlineServer, _main + 1169
+	FOnlineServer, _WinMain@16 + 402
+	FOnlineServer, __tan_default + 552
+	KERNEL32, BaseThreadInitThunk + 25
+	ntdll, RtlGetAppContainerNamedObjectPath + 286
+	ntdll, RtlGetAppContainerNamedObjectPath + 238
+
+Thread 'Unknown' (20144)
+	ntdll, ZwWaitForWorkViaWorkerFactory + 12
+	KERNEL32, BaseThreadInitThunk + 25
+	ntdll, RtlGetAppContainerNamedObjectPath + 286
+	ntdll, RtlGetAppContainerNamedObjectPath + 238
+
+Thread 'Unknown' (8492)
+	ntdll, ZwWaitForWorkViaWorkerFactory + 12
+	KERNEL32, BaseThreadInitThunk + 25
+	ntdll, RtlGetAppContainerNamedObjectPath + 286
+	ntdll, RtlGetAppContainerNamedObjectPath + 238
+
+Thread 'Unknown' (6536)
+	ntdll, ZwWaitForWorkViaWorkerFactory + 12
+	KERNEL32, BaseThreadInitThunk + 25
+	ntdll, RtlGetAppContainerNamedObjectPath + 286
+	ntdll, RtlGetAppContainerNamedObjectPath + 238
+
+Thread 'Unknown' (8740)
+	ntdll, NtWaitForMultipleObjects + 12
+	combase, CLSIDFromString + 4476
+	combase, CoIncrementMTAUsage + 889
+	combase, CLSIDFromString + 4161
+	combase, Ordinal140 + 399
+	KERNEL32, BaseThreadInitThunk + 25
+	ntdll, RtlGetAppContainerNamedObjectPath + 286
+	ntdll, RtlGetAppContainerNamedObjectPath + 238
+
+Thread 'Unknown' (17804)
+	ntdll, ZwWaitForWorkViaWorkerFactory + 12
+	KERNEL32, BaseThreadInitThunk + 25
+	ntdll, RtlGetAppContainerNamedObjectPath + 286
+	ntdll, RtlGetAppContainerNamedObjectPath + 238
+
+Thread 'Unknown' (7444)
+	ntdll, ZwWaitForWorkViaWorkerFactory + 12
+	KERNEL32, BaseThreadInitThunk + 25
+	ntdll, RtlGetAppContainerNamedObjectPath + 286
+	ntdll, RtlGetAppContainerNamedObjectPath + 238
+
+Thread 'GUIUpdate' (12544)
+	ntdll, NtDelayExecution + 12
+	KERNELBASE, Sleep + 15
+	FOnlineServer, public: static void __cdecl Thread::Sleep(unsigned int) + 13
+	FOnlineServer, void __cdecl GUIUpdate(void *) + 17
+	FOnlineServer, void * __cdecl ThreadBeginExecution(void *) + 44
+	FOnlineServer, _ptw32_threadStart@4 + 97
+	FOnlineServer, __endthreadex + 58
+	FOnlineServer, __endthreadex + 196
+	KERNEL32, BaseThreadInitThunk + 25
+	ntdll, RtlGetAppContainerNamedObjectPath + 286
+	ntdll, RtlGetAppContainerNamedObjectPath + 238
+
+Thread 'ScriptTimeout' (9768)
+	ntdll, NtDelayExecution + 12
+	KERNELBASE, Sleep + 15
+	FOnlineServer, public: static void __cdecl Thread::Sleep(unsigned int) + 13
+	FOnlineServer, void __cdecl RunTimeout(void *) + 963
+	FOnlineServer, void * __cdecl ThreadBeginExecution(void *) + 44
+	FOnlineServer, _ptw32_threadStart@4 + 97
+	FOnlineServer, __endthreadex + 58
+	FOnlineServer, __endthreadex + 196
+	KERNEL32, BaseThreadInitThunk + 25
+	ntdll, RtlGetAppContainerNamedObjectPath + 286
+	ntdll, RtlGetAppContainerNamedObjectPath + 238
+
+Loaded modules
+	C:\Users\Miguel Bonansea\Documents\GitHub\fonline_aftertimes_s2_server_tools (1)\Server\FOnlineServer.exe (00400000)
+	C:\WINDOWS\SYSTEM32\ntdll.dll (77C60000)
+	C:\WINDOWS\System32\KERNEL32.DLL (777B0000)
+	C:\WINDOWS\System32\KERNELBASE.dll (77120000)
+	C:\WINDOWS\System32\USER32.dll (76A60000)
+	C:\WINDOWS\System32\win32u.dll (77B40000)
+	C:\WINDOWS\System32\GDI32.dll (76C00000)
+	C:\WINDOWS\System32\gdi32full.dll (778A0000)
+	C:\WINDOWS\System32\msvcp_win.dll (76F20000)
+	C:\WINDOWS\System32\ucrtbase.dll (77000000)
+	C:\WINDOWS\System32\ADVAPI32.dll (77AC0000)
+	C:\WINDOWS\System32\msvcrt.dll (760E0000)
+	C:\WINDOWS\System32\sechost.dll (76DF0000)
+	C:\WINDOWS\System32\RPCRT4.dll (76C30000)
+	C:\WINDOWS\System32\WS2_32.dll (761A0000)
+	C:\WINDOWS\System32\PSAPI.DLL (76860000)
+	C:\WINDOWS\System32\SHELL32.dll (75B20000)
+	C:\WINDOWS\SYSTEM32\dbghelp.dll (722C0000)
+	C:\WINDOWS\SYSTEM32\WINMM.dll (73C70000)
+	C:\WINDOWS\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.19041.1110_none_c0da534e38c01f4d\COMCTL32.dll (71130000)
+	C:\WINDOWS\System32\ole32.dll (77430000)
+	C:\WINDOWS\System32\combase.dll (77520000)
+	C:\WINDOWS\SYSTEM32\dbgcore.DLL (72F30000)
+	C:\WINDOWS\System32\IMM32.DLL (76210000)
+	C:\WINDOWS\system32\uxtheme.dll (72C30000)
+	C:\WINDOWS\System32\MSCTF.dll (779E0000)
+	C:\WINDOWS\System32\OLEAUT32.dll (77390000)
+	C:\WINDOWS\SYSTEM32\kernel.appcore.dll (71F90000)
+	C:\WINDOWS\System32\bcryptPrimitives.dll (77BF0000)
+	C:\WINDOWS\SYSTEM32\textinputframework.dll (6F910000)
+	C:\WINDOWS\System32\CoreMessaging.dll (6F870000)
+	C:\WINDOWS\System32\CoreUIComponents.dll (6F5F0000)
+	C:\WINDOWS\System32\SHCORE.dll (76CF0000)
+	C:\WINDOWS\SYSTEM32\ntmarta.dll (71FF0000)
+	C:\WINDOWS\SYSTEM32\wintypes.dll (703C0000)
+	C:\WINDOWS\System32\clbcatq.dll (76870000)
+	C:\WINDOWS\system32\dataexchange.dll (6E210000)
+	C:\WINDOWS\system32\d3d11.dll (6E030000)
+	C:\WINDOWS\system32\dcomp.dll (6DEC0000)
+	C:\WINDOWS\system32\dxgi.dll (6F9D0000)
+	C:\WINDOWS\system32\twinapi.appcore.dll (70180000)
+	C:\WINDOWS\system32\msimtf.dll (71540000)
+	C:\WINDOWS\SYSTEM32\TextShaping.dll (68450000)
+	C:\Users\Miguel Bonansea\Documents\GitHub\fonline_aftertimes_s2_server_tools (1)\Server\scripts\parameters.dll (710E0000)
+	C:\Users\Miguel Bonansea\Documents\GitHub\fonline_aftertimes_s2_server_tools (1)\Server\scripts\backend.dll (71080000)
+	C:\Users\Miguel Bonansea\Documents\GitHub\fonline_aftertimes_s2_server_tools (1)\Server\LIBMYSQL.dll (10000000)
+	C:\WINDOWS\SYSTEM32\WSOCK32.dll (72B60000)
+	C:\WINDOWS\system32\napinsp.dll (74060000)
+	C:\WINDOWS\system32\pnrpnsp.dll (74010000)
+	C:\WINDOWS\system32\wshbth.dll (74090000)
+	C:\WINDOWS\system32\NLAapi.dll (735E0000)
+	C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL (74740000)
+	C:\WINDOWS\System32\mswsock.dll (72450000)
+	C:\WINDOWS\SYSTEM32\DNSAPI.dll (746A0000)
+	C:\WINDOWS\System32\NSI.dll (76310000)
+	C:\WINDOWS\System32\winrnr.dll (735D0000)
+	C:\Windows\System32\rasadhlp.dll (74050000)
+	C:\WINDOWS\System32\fwpuclnt.dll (72ED0000)
+	C:\WINDOWS\System32\bcrypt.dll (76DD0000)
+	C:\Users\Miguel Bonansea\Documents\GitHub\fonline_aftertimes_s2_server_tools (1)\Server\scripts\utils.dll (71030000)
+	C:\Users\Miguel Bonansea\Documents\GitHub\fonline_aftertimes_s2_server_tools (1)\Server\scripts\check_look.dll (70FE0000)
+	C:\Users\Miguel Bonansea\Documents\GitHub\fonline_aftertimes_s2_server_tools (1)\Server\scripts\online_stats.dll (6FAB0000)
