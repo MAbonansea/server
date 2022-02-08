@@ -160,12 +160,8 @@ bool UseDoctorOnCritter(Critter& cr, Critter& targetCr, Item@ item)
 
     bool is_self = (targetCr.Id == cr.Id);
 
-    if(targetCr.IsDead() && (cr.Perk[PE_MEDIC] == 0  || cr.Perk[PE_CPU_II]  == 0))
-    {
-        cr.SayMsg(SAY_NETMSG, TEXTMSG_GAME, STR_SKILL_NORESSURECT);
-        return true;
-    }else if(targetCr.IsDead() && (cr.Perk[PE_MEDIC] == 1  || cr.Perk[PE_CPU_II]  == 1))
-    {
+    if(targetCr.IsDead() && (cr.Perk[PE_MEDIC] > 0  || cr.Perk[PE_CPU_II]  > 0))
+    {  
           targetCr.ToLife();
 
     DropPoison(cr);
@@ -174,6 +170,13 @@ bool UseDoctorOnCritter(Critter& cr, Critter& targetCr, Item@ item)
 
     targetCr.StatBase[ST_CURRENT_AP] = cr.Stat[ST_ACTION_POINTS] * 100;
         _SetTimeout(cr, TO_SK_DOCTOR, DOCTOR_REVIVE_TIMEOUT(cr));
+        return true;
+    }
+
+    if(targetCr.IsDead() && (cr.Perk[PE_MEDIC] == 0  || cr.Perk[PE_CPU_II]  == 0))
+    {
+        cr.SayMsg(SAY_NETMSG, TEXTMSG_GAME,STR_SKILL_NORESSURECT);
+        return true;
     }
     
 

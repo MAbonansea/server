@@ -2727,7 +2727,12 @@ void CommenceExplosion(AttackStruct& attack, Map@ map, uint16 tx, uint16 ty, Cri
 	{
 		MolotovBlast( map, tx, ty, PID_FIRE_HEX, ( valid( attack.Attacker ) ? attack.Attacker.Id : 0 ) );
 		map.RunEffect(PID_EXPLODE_FIRE_BIG, tx, ty, 2);
-	}
+	}else if (weapPid == PID_GHL_SCRAP_LAUNCHER)
+    {
+        MolotovBlast( map, tx, ty, PID_FIRE_HEX, ( valid( attack.Attacker ) ? attack.Attacker.Id : 0 ) );
+		map.RunEffect(PID_EXPLODE_FIRE_BIG, tx, ty, 2);
+    }
+    
 // stary wybuch molotova
    //if(weapPid == PID_MOLOTOV_COCKTAIL)
        // map.RunEffect(PID_EXPLODE_FIRE_BIG, tx, ty, 2); 
@@ -2767,7 +2772,7 @@ void CommenceExplosion(AttackStruct& attack, Map@ map, uint16 tx, uint16 ty, Cri
         ApplyDamage(attack, target, 1, isCritical, intentionally, results, CriticalChance);
 		// tutaj już powinno byc tak, że zaczyna typa palic i chuj
 		if(weapPid==PID_MOLOTOV_COCKTAIL ||  weapPid== PID_GHL_SCRAP_LAUNCHER)
-		{
+		{   
 			target.StatBase[ST_BURN_STACK]+=ADD_BURN_STACK;
 			if(target.Stat[ST_BURN_STACK]>MAX_BURN_STACK) target.StatBase[ST_BURN_STACK]=MAX_BURN_STACK;
 			target.StatBase[ST_BURN_LAST_ENEMY_ID]=attack.Attacker.Id;

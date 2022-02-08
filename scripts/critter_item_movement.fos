@@ -83,7 +83,6 @@ bool critter_check_move_item(Critter& cr, Item& item, uint8 toSlot, Item@ itemSw
         
         if(can && !cr.IsPlayer())
         { 
-            Log("test armor");
              can = false;
         }
 		

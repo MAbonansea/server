@@ -45,7 +45,8 @@ bool IsHexShotWeapon(ItemMutual@ item)
     return (item.GetProtoId() == PID_ROCKET_LAUNCHER
             || item.GetProtoId() == PID_GRENADE_PISTOL
             || item.GetProtoId() == PID_GRENADE_LAUNCHER
-            || item.GetProtoId() == PID_M203);
+            || item.GetProtoId() == PID_M203
+            || item.GetProtoId() == PID_GHL_SCRAP_LAUNCHER    );
 }
 
 uint HexShotGetMaxRange(CritterMutual& cr, ItemMutual@ item)

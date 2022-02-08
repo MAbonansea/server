@@ -1532,6 +1532,7 @@ uint dlg_SayBuyLighter(Critter& player, Critter@ npc, string@ text)
     return DIALOG_END;
 }
 void r_changeRaceRobot_Asault(Critter& player,Critter@ npc, int timeout) {
+        player.PerkBase[PE_TERMINATOR] = 1;
         player.StatBase[ST_LUCK_EXT] -=4;
         player.StatBase[ST_PERCEPTION_EXT] +=4;
         player.StatBase[ST_ACTION_POINTS_EXT] +=2;
@@ -1553,6 +1554,7 @@ void r_changeRaceRobot_Asault(Critter& player,Critter@ npc, int timeout) {
 
 }
 void r_changeRaceRobot_Melee(Critter& player,Critter@ npc, int timeout) {
+        player.PerkBase[PE_TERMINATOR] = 0;
         player.StatBase[ST_LUCK_EXT] +=4;
         player.StatBase[ST_PERCEPTION_EXT] +=2;
         player.StatBase[ST_ACTION_POINTS_EXT] +=3;
