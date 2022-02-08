@@ -585,6 +585,7 @@
 #define ST_FACTION_UPDATE_SEQ                    (146)
 #define ST_MINIGAME_DATA                         (147) // custom minigame data (first byte is reserved to store minigame team and id)
 #define ST_NPC_BOSS                 (148) // Additional variable, used in mob_dynamics for boss flag
+#define ST_EMOJI                    (149)
 
 // Initial values of animation 3d layers
 #ifdef PLAYERS_3D
