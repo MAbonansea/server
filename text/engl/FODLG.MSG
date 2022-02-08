@@ -811,3 +811,13 @@
 {18801}{}{Enclave turrets are equipped with heavy dual miniguns that can rip even through power armor with ease, making fighting one's way through hardly an option.}
 {18810}{}{Aerial Turret}
 {18811}{}{Enclave turrets are equipped with heavy dual miniguns that can rip even through power armor with ease, making fighting one's way through hardly an option.}
+{18820}{}{Helper Master of Caniches}
+{18821}{}{Alpha Canniche}
+{18830}{}{Cobeli FautoMaster}
+{18831}{}{Yo te vi caer en AOP}
+{18840}{}{Mono Pressor}
+{18841}{}{un lindo mono}
+{18850}{}{Seki}
+{18851}{}{Gay Lord}
+{18860}{}{Seki After Exploits}
+{18861}{}{Seki SSJ}

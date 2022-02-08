@@ -584,6 +584,7 @@
 #define ST_CURRENT_HELMET_PERK                   (145) // we're running out of space here :)
 #define ST_FACTION_UPDATE_SEQ                    (146)
 #define ST_MINIGAME_DATA                         (147) // custom minigame data (first byte is reserved to store minigame team and id)
+#define ST_NPC_BOSS                 (148) // Additional variable, used in mob_dynamics for boss flag
 
 // Initial values of animation 3d layers
 #ifdef PLAYERS_3D
@@ -598,7 +599,6 @@
 #define ST_COMMAND              	(184) // Command type
 #define ST_COMMAND_X            	(185) // Command hexX
 #define ST_COMMAND_Y            	(186) // Command hexY
-#define ST_NPC_BOSS                 (187) // Additional variable, used in mob_dynamics for boss flag
 #define ST_BURN_LAST_ENEMY_ID       (188) // ID of a thing that has ignited the hex / thrown molotov etc.
 #define ST_LAST_LOOT                (189) // ID of last looted body or container - antiexploit
 
@@ -1053,7 +1053,6 @@
 #define FV_FLAGS                                 (941)
 #define FV_RESPAWN_BASE_ID                       (942) // Because of multiple faction bases
 #define FV_DRUG_USES_STATE                       (943) // Drug uses state
-#define MODE_ROBOT                                (944)
 
 #define FV_FLAG_MASTER_SPEAKER                   (0x1)
 #define FV_FLAG_FLED_BATTLE                      (0x2) // Has fled battle and is waiting on worldmap.
@@ -1138,6 +1137,7 @@
 // Timeouts in real seconds, generic values
 #define FIRST_AID_TIMEOUT                        # (cr)     ( REAL_SECOND( (((cr.Skill[SK_FIRST_AID] > 50 ? cr.Skill[SK_FIRST_AID] : 50) * -6 / 10) + 210) / (cr.Perk[PE_MEDIC] > 0 ? 2 : 1)) )           // cd = (-6 * skill)/10 - 210 -> from 180s @sk<=50 to 90s @sk==200 (max)
 #define DOCTOR_TIMEOUT                           # (cr)     ( REAL_SECOND( (((cr.Skill[SK_DOCTOR] > 50 ? cr.Skill[SK_DOCTOR] : 50) * -6 / 10) + 210) / (cr.Perk[PE_MEDIC] > 0 ? 2 : 1)) )           // cd = (-6 * skill)/10 - 210 -> from 180s @sk<=50 to 90s @sk==200 (max)
+#define DOCTOR_REVIVE_TIMEOUT                    # (cr)     (REAL_MINUTE(5))
 
 #define REPAIR_TIMEOUT                           # (cr)        ( REAL_SECOND( (((cr.Skill[SK_REPAIR] > 50 ? cr.Skill[SK_REPAIR] : 50) * -6 / 10) + 210) / (cr.Perk[PE_CPU_II] > 0 ? 2 : 1)) )                                                                                                                                     // Orig 4 time on day, 1 min
 #define SCIENCE_TIMEOUT                          # (cr)       (REAL_MINUTE(1))                                                                                                                                     // Orig 6 time on day, 1 min
@@ -1221,7 +1221,7 @@
 #define SCORE_MARIPOSA_CUR                       (48)
 #define SCORE_SIERRA_CUR                         (49)
 
-#define SCORES_MAX                               (50)
+#define SCORES_MAX                               (100)
 
 // Car flags
 #define CAR_BIO_ENGINE                           (0x0001)
@@ -1446,7 +1446,6 @@
 #define COMMAND_CHANGE_PASSWORD                  (35)
 #define COMMAND_DROP_UID                         (36)
 #define COMMAND_LOG                              (37)
-#define COMMAND_CMD                              (38)
 
 
 #define REPLICATION_DELETE_FAST                  (-3)

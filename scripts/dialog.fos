@@ -1531,53 +1531,7 @@ uint dlg_SayBuyLighter(Critter& player, Critter@ npc, string@ text)
     }
     return DIALOG_END;
 }
-
-void revertOtherShape( Critter@ player) {
-        player.StatBase[ST_BASE_CRTYPE ] = 17;
-        player.StatBase[ST_OVERRIDE_CRTYPE] = 17;
-        player.StatBase[ST_BODY_TYPE] = 10;
-
-    if(player.StatBase[MODE_ROBOT]  == 1) { return;}
-    
-        if(player.StatBase[MODE_ROBOT]  == 2 ) {
-        player.StatBase[ST_LUCK_EXT] +=4;
-        player.StatBase[ST_PERCEPTION_EXT] +=4;
-        player.StatBase[ST_ACTION_POINTS_EXT] +=2;
-        player.StatBase[ST_MAX_LIFE_EXT] -= 100;
-        for (int i = ST_NORMAL_RESIST; i < ST_POISON_RESISTANCE; i++)
-        {
-            player.StatBase[STAT_EXT_BEGIN + i] -= 20;
-        };
-
-         for (int i = ST_NORMAL_ABSORB; i < ST_NORMAL_RESIST; i++)
-        {
-            player.StatBase[STAT_EXT_BEGIN + i] -= 5;
-        };
-        }
-    
-        if(player.StatBase[MODE_ROBOT] == 3) {
-              player.StatBase[ST_LUCK_EXT] -=4;
-        player.StatBase[ST_PERCEPTION_EXT] -=2;
-        player.StatBase[ST_ACTION_POINTS_EXT] -=3;
-        player.StatBase[ST_ARMOR_CLASS_EXT]  -=50;
-        player.StatBase[ST_MELEE_DAMAGE_EXT] -= 50;
-        player.StatBase[SK_SNEAK] -= 150;
-        player.StatBase[ST_MAX_LIFE_EXT] -=50;
-        for (int i = ST_NORMAL_RESIST; i < ST_POISON_RESISTANCE; i++)
-        {
-            player.StatBase[STAT_EXT_BEGIN + i] += 5;
-        };
-
-         for (int i = ST_NORMAL_ABSORB; i < ST_NORMAL_RESIST; i++)
-        {   
-            player.StatBase[STAT_EXT_BEGIN + i] += 1;
-        };
-        }
-}
-
 void r_changeRaceRobot_Asault(Critter& player,Critter@ npc, int timeout) {
-         revertOtherShape(player);
-        player.StatBase[MODE_ROBOT]= 2;
         player.StatBase[ST_LUCK_EXT] -=4;
         player.StatBase[ST_PERCEPTION_EXT] +=4;
         player.StatBase[ST_ACTION_POINTS_EXT] +=2;
@@ -1599,8 +1553,6 @@ void r_changeRaceRobot_Asault(Critter& player,Critter@ npc, int timeout) {
 
 }
 void r_changeRaceRobot_Melee(Critter& player,Critter@ npc, int timeout) {
-    revertOtherShape(player);
-        player.StatBase[MODE_ROBOT]= 3;
         player.StatBase[ST_LUCK_EXT] +=4;
         player.StatBase[ST_PERCEPTION_EXT] +=2;
         player.StatBase[ST_ACTION_POINTS_EXT] +=3;
@@ -1662,34 +1614,6 @@ void r_changeRaceClaw(Critter& cr, Critter@ npc, int timeout) {
      setBonusItemWeapon(itm);
      return;
 }
-
-void r_changeRaceHuman(Critter& cr, Critter@ npc, int timeout) {
-
-    cr.PerkBase[PE_VAMPIRE] = 0;
-    if(cr.StatBase[PE_MUTATE] == 1) {
-        for (int i = ST_NORMAL_RESIST; i < ST_POISON_RESISTANCE; i++)
-        {
-            cr.StatBase[i] -= 15;
-        };
-
-         for (int i = ST_NORMAL_ABSORB; i < ST_NORMAL_RESIST; i++)
-        {
-            cr.StatBase[i] -=  3;
-        };
-    }
-
-    cr.StatBase[ST_BASE_CRTYPE] = CRTYPE_FEMALE_DEFAULT;
-    cr.PerkBase[PE_ALIEN_PLAYER] = 0;
-    cr.PerkBase[PE_GECKO_PLAYER] = 0;
-    cr.PerkBase[PE_CLAW_PLAYER] = 0;
-    cr.PerkBase[PE_TERMINATOR] = 0;
-    cr.PerkBase[PE_MUTATE] = 0;
-     cr.PerkBase[PE_GHOUL_PLAYER] = 0;
-    cr.ChangeCrType(cr.StatBase[ST_BASE_CRTYPE]);
-       
-    return;
-}
-
 void r_changeRaceMutante(Critter& cr, Critter@ npc, int timeout) {
     cr.PerkBase[PE_ALIEN_PLAYER] = 0;
     cr.PerkBase[PE_GECKO_PLAYER] = 0;
@@ -1723,7 +1647,6 @@ void r_changeRaceGhoulSniper(Critter& cr, Critter@ npc, int timeout) {
     cr.PerkBase[PE_MUTATE] = 0;
     cr.PerkBase[PE_GHOUL_PLAYER] = 1;
     cr.StatBase[ST_BASE_CRTYPE] = 28;
-    cr.StatBase[ST_MAX_LIFE] -= 50; 
 
          for (int i = ST_NORMAL_RESIST; i < ST_POISON_RESISTANCE; i++)
         {
@@ -1746,7 +1669,6 @@ void r_changeRaceGhoulSG(Critter& cr, Critter@ npc, int timeout) {
     cr.PerkBase[PE_MUTATE] = 0;
     cr.PerkBase[PE_GHOUL_PLAYER] = 1;
     cr.StatBase[ST_BASE_CRTYPE] = 79;
-    cr.StatBase[ST_MAX_LIFE] -= 50; 
 
          for (int i = ST_NORMAL_RESIST; i < ST_POISON_RESISTANCE; i++)
         {
@@ -2192,76 +2114,6 @@ array<uint32> GetRandomItem()
     };
     return Pool[RandomNumber]; 
     
-}
-
-
-uint r_checkMaxImp(Critter& cr, Critter@ npc, int timeout) {
-    int maxSpecialImp = 6;
-    int maxCombatImp = 6;
-    array<int> currentTotal = searchForImpPerks(cr);
-     maxSpecialImp = maxSpecialImp - currentTotal[0];
-     maxCombatImp = maxCombatImp - currentTotal[1];
-     Log("maxSpecialImp: " + maxSpecialImp);
-     Log("maxCombatImp: " + maxCombatImp );
-	 array<int>  lim = {maxSpecialImp,maxCombatImp};
-     searchForImpInv(cr,lim);
-	 return DIALOG_END;
-}
-
-uint searchForImpInv(Critter& cr, array<int> limit) {
-		uint ST = _CritCountItem(cr, PID_IMPLANT_STRENGTH);
-		uint PE = _CritCountItem(cr, PID_IMPLANT_PERCEPTION);
-		uint EN  = _CritCountItem(cr, PID_IMPLANT_ENDURANCE);
-		uint CH =  _CritCountItem(cr, PID_IMPLANT_CHARISMA);
-		uint IN = _CritCountItem(cr, PID_IMPLANT_INTELLIGENCE);
-		uint AG = _CritCountItem(cr, PID_IMPLANT_AGILITY);
-		uint LK = _CritCountItem(cr, PID_IMPLANT_LUCK);
-        uint DER =  _CritCountItem(cr,PID_IMPLANT_DERMAL);
-        uint PHO = _CritCountItem(cr, PID_IMPLANT_PHOENIX);
-        uint NEN = _CritCountItem(cr,PID_IMPLANT_NEMEAN);
-
-        int currentSP = limit[0];
-        int currentCB = limit[1];
-        int currentInvSP = ST + PE + EN + CH + IN + AG + LK;
-        int currentInvCB = DER + PHO + NEN;
-
-        if( currentSP - currentInvSP < 0 ) {
-            return DIALOG_END;
-        };
-		
-        array<int>  impSP = {
-        ST,
-        PE,
-        EN,
-        CH,
-        IN,
-        AG,
-        LK
-        };
-        for (int i = 0; i < impSP.length(); i++)
-        {
-           currentSP =  currentSP - impSP[i] ;
-        };
-        
-			if( 7 > currentSP) {
-            Log("en SP LOOP");
-            int index = 0;
-            for(uint i = ST_STRENGTH; i <= ST_LUCK; i++) {
-                   if(impSP[index] > 0) {
-                    cr.StatBase[i] += impSP[index];
-                    index++;
-                   }
-                    
-            }
-        }
-        return DIALOG_END;
-}
-
-array<int> searchForImpPerks(Critter& cr) {
-    int currentcantSpecial =  cr.PerkBase[469] + cr.PerkBase[468] + cr.PerkBase[467] + cr.PerkBase[466] + cr.PerkBase[465] + cr.PerkBase[464] + cr.PerkBase[463];
-    int currentcantCombat =    cr.PerkBase[433] + cr.PerkBase[432] + cr.PerkBase[434] + cr.PerkBase[435] + cr.PerkBase[462];
-	array<int> allImp = { currentcantSpecial, currentcantCombat };
-    return allImp;
 }
 
 uint dlg_SayBuyMedGel(Critter& player, Critter@ npc, string@ text)

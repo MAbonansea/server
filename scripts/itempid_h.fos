@@ -757,6 +757,17 @@ enum MiscMoney
     #define PID_DOLLAR                 (9715)
 };
 
+enum Implant
+{
+      #define PID_IMPLANT_STRENGTH     (22054)
+    #define PID_IMPLANT_PERCEPTION      (22055)
+    #define PID_IMPLANT_ENDURANCE    (22056)
+    #define PID_IMPLANT_CHARISMA       (22057)
+    #define PID_IMPLANT_INTELLIGENCE                 (22058)
+     #define PID_IMPLANT_AGILITY       (22059)
+    #define PID_IMPLANT_LUCK                 (22060)
+}
+
 #ifdef __SERVER // for now, client does not have required ASEngine-related functions
 # ifndef ITEMPID_SKIP_IMPORTS
 #  ifndef __ITEMPID__

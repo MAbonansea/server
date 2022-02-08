@@ -452,7 +452,7 @@ Material=7
 CraftLevel=1
 
 [Proto]
-ProtoId=25562
+ProtoId=25552
 Type=2
 PicMap=art\items\drugs\jet.fofrm
 PicInv=art\inven\jet.frm

@@ -107,8 +107,8 @@ void DrawCritterOnHead()	//export
 		{
 			switch(crs[i].Param[ST_NPC_BOSS])
 			{
-				case 1 : playerDesc = "\n|" + COLOR_RGB(255, 255, 255) + " -TESTER-"; break;
-				case 2 : playerDesc = "\n|" + COLOR_RGB(255, 255, 255) + " -GAME MASTER-"; break;
+				case 1 : playerDesc = "\n|" + COLOR_RGB(255, 255, 255) + " -WAVE BOSS-"; break;
+				case 2 : playerDesc = "\n|" + COLOR_RGB(255, 255, 255) + " -FINAL BOSS-"; break;
 				case 3 : playerDesc = "\n|" + COLOR_RGB(255, 255, 255) + " -ADMINISTRATOR-"; break;
 			}
 		}

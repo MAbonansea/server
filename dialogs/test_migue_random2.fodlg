@@ -10,8 +10,7 @@ lang=engl
 2 1010 @
 2 2000 None 0 #
 0 2010 R _script dialog@r_GiveRandomItemFromList 1 0 #
-0 2020 R _script dialog@r_checkMaxImp 1 0 #
-0 2030 @
+0 2020 @
 
 
 

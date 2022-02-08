@@ -256,6 +256,13 @@ bool ReloadWeapon(Critter& cr)
     if(!valid(ammo))
         return false;
 
+        if((weapon.GetProtoId()==PID_FIRE_GECKO_FLAME_WEAPON  || weapon.GetProtoId()== PID_WEAK_FLAME_BREATH ) && (weapon.Proto.Weapon_MaxAmmoCount - weapon.AmmoCount)>0)
+	{
+		weapon.AmmoCount=weapon.Proto.Weapon_MaxAmmoCount;
+		cr.Action(ACTION_RELOAD_WEAPON, 3, weapon);
+		weapon.Update();
+		return true;
+	}
 
     uint count = MIN(ammo.GetCount(), weapon.Proto.Weapon_MaxAmmoCount - weapon.AmmoCount);
     if(count > 0)

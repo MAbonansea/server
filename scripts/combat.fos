@@ -1994,7 +1994,7 @@ void ApplyDamage(AttackStruct& attack, Critter& target, uint rounds, bool isCrit
             totalDmg += 5;                                                                                      // Yes, pulse grenade works
         //if(attack.Attacker.Perk[PE_PYROMANIAC] != 0 && dmgType == DAMAGE_FIRE && (weapPid == PID_FIRE_HEX || weapPid == PID_MOLOTOV_COCKTAIL || ammoPid == PID_FIRE_HEX || ammoPid == PID_MOLOTOV_COCKTAIL))
 		if(attack.Attacker.Perk[PE_PYROMANIAC] != 0 && dmgType == DAMAGE_FIRE && target.Stat[ST_BURN_STACK] >= 0 && !valid(attack.Ammo))
-			totalDmg += Random(1, 2) * attack.Attacker.Perk[PE_PYROMANIAC];
+			totalDmg *= attack.Attacker.Perk[PE_PYROMANIAC] == 1 ? 1.15 : (attack.Attacker.Perk[PE_PYROMANIAC] == 0 ? 1 : 1.30) ;
 		else if(attack.Attacker.Perk[PE_PYROMANIAC] != 0 && dmgType == DAMAGE_FIRE && ammoPid != PID_SHOTGUN_DRAGON_BREATH_SHELLS)
             totalDmg += 20 * attack.Attacker.Perk[PE_PYROMANIAC];
 		
@@ -2005,7 +2005,7 @@ void ApplyDamage(AttackStruct& attack, Critter& target, uint rounds, bool isCrit
         
 		//druto
 		if(attack.Attacker.Trait[TRAIT_ONE_HANDER] != 0 && (!valid(realWeapon) || FLAG(realWeapon.Flags, ITEM_TWO_HANDS)))
-            totalDmg *= 1.5;
+            totalDmg *= 1.25;
 		if(attack.Attacker.Trait[TRAIT_KAMIKAZE] != 0)
 			totalDmg *= 1.1;
             int randomGhoul = Random(0,9);
@@ -2766,7 +2766,7 @@ void CommenceExplosion(AttackStruct& attack, Map@ map, uint16 tx, uint16 ty, Cri
 		if(isCritical) CriticalChance=100;
         ApplyDamage(attack, target, 1, isCritical, intentionally, results, CriticalChance);
 		// tutaj już powinno byc tak, że zaczyna typa palic i chuj
-		if(weapPid==PID_MOLOTOV_COCKTAIL)
+		if(weapPid==PID_MOLOTOV_COCKTAIL ||  weapPid== PID_GHL_SCRAP_LAUNCHER)
 		{
 			target.StatBase[ST_BURN_STACK]+=ADD_BURN_STACK;
 			if(target.Stat[ST_BURN_STACK]>MAX_BURN_STACK) target.StatBase[ST_BURN_STACK]=MAX_BURN_STACK;
@@ -2783,7 +2783,7 @@ void CommenceExplosion(AttackStruct& attack, Map@ map, uint16 tx, uint16 ty, Cri
             {
 			 ApplyDamage(attack, critsHit[i], 1, false, intentionally, results, 0);
 			// no i jesli jest typ lezy na nokaucie to ma go grzebac jak wikinga :D burn baby, burn kurwa
-			if(weapPid==PID_MOLOTOV_COCKTAIL)
+			if(weapPid==PID_MOLOTOV_COCKTAIL ||  weapPid== PID_GHL_SCRAP_LAUNCHER)
 			{
 				map.GetCrittersHex(tx, ty, radius, FIND_LIFE_AND_KO, critsHit);
 				critsHit[i].StatBase[ST_BURN_STACK]+=ADD_BURN_STACK;

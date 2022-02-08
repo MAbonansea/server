@@ -9869,8 +9869,32 @@ a58ew64v}
 {2554601}{}{The specific size of a leather jacket, probably designed only for mutants}
 {2554700}{}{Plating Mutant Armor}
 {2554701}{}{It is crude armor that uses straps of leather and metal bands to form a sparse but effective covering. It can only be worn by super mutants. }
-{2556200}{}{Cannibal}
-{2556201}{}{Plisken es un bobo}
+{2554900}{}{Piel de Ghoul}
+{2554901}{}{La piel curtida y mutada de un ghoul superviviente que lucha contra ratas deathclaws o mutantes y robots. Es equivalente a una armadura de cuero mejorada, aunque tiene sus limitaciones defensivas}
+{2555000}{}{Traje de Vault Reforzado desgastado de Scavenger}
+{2555001}{}{Un antiguo traje de vault en harapos, reforzado en algunos sectores con piezas de metal reflectante y cuero anticorte}
+{2555100}{}{Armadura de Combate Ghoul Infiltrador}
+{2555101}{}{Una armadura de combate reforzada, esta un poco desgastada, con quemaduras, impactos de balas y araniasos pero totalmente funcional. Camuflada debajo de una tunica gruesa para no revelar a su portador.}
+{2555200}{}{Cannibal}
+{2555201}{}{Plisken es un bobo}
+{2555300}{}{Scrap Scav Rifle}
+{2555301}{}{Rifle de francotirador pesado, de fabricacion casera scavenger. Recalibrado al abundante y poderoso 14mm, pero no esperes disparar sin que falle algun componente}
+{2555400}{}{Scrap Laser Carbine}
+{2555401}{}{Carabina laser militar de la pre guerra, modificada por scavengers para realizar disparos concentrados de doble o triple consumo al apriete de un boton, Agradece si logras disparar mas de una carga sin terminar con el gatillo en la mano o con el canion derretido}
+{2555500}{}{Scrap TriAssault Laser}
+{2555501}{}{Rifle de asalto laser de rafagas cortas con selector para rafaga extendida, Looteado de alguna base derruida hace siglos, usado, y abusado, por los ghouls , no esperes fiabilidad...}
+{2555600}{}{Scrap Laser Shotgun}
+{2555601}{}{Triple capacitor-canion, Triple potencia,, lo mejor en tecnologia militar para corta distancia de la pre guerra... aunque este modelo se encuentra en un estado cuestionable, el gatillo desgastado y no refrigera correctamente. Utiliza baterias de microfusion con capacidad total para 3 disparos de media potencia o 2 a maxima corriendo el riesgo de perder un brazo. En la culata se aprecia un sticker desgastado donde figura alguien que rechina los dientes y dice La Estacion de PODER...de JUEGO  PIU PU EEEEH  PRIMER NIVEH QUE VENIS CON MARIO BROS PELOTUDO}
+{2555700}{}{Scrap Crossbow}
+{2555701}{}{Ballesta neumatica modificada que logra lanzar dardos perforantes a tanta presion que voltea hasta brahmins en celo. Eso si,  nunca sabes si conservaras los dedos}
+{2555800}{}{Scrap Flame Launcher}
+{2555801}{}{Lanzagranadas modificado para ser incendiario e inestable. ingeniado por ghouls bajo efectos de jet, mentats y exceso de curtiembre}
+{2555900}{}{Scrap Scavenger 14mm}
+{2555901}{}{Pistola de 14mm modificada. En su afan de ganarles territorio a los mutantes del maestro los renegados scavenger diseñaron un arma portable que puede voltear a un mutante o un centauro con sus rafagas de 14mm pero al mismo tiempo redujeron la ergonomia y vida util de sus componentes en un 70%}
+{2556000}{}{Scrap Triple Barrel}
+{2556001}{}{Un verdadero regalo del apocalipsis. Una rara mezcla de arcabuz y escopeta. Cansado de siempre necesitar recargar con las escopetas al enfrentarse a centauros deathclaws y floaters,  algun kaloghoul diseño un prototipo inestable con un tercer canion, unifico los gatillos y aumento el espacio de las 3 recamaras para poder meterle polvora adicional. El resultado es devastador, al coste de transformar el arma en una ocacional bomba suicida. }
+{2556100}{}{Scrap Smg}
+{2556101}{}{Otra maravilla de los scavenger, gracias a una adaptacion de los mecanismos de  la smg y un cargador extendido de tambor, al liberar el gatillo, se logra escupir 30 o hasta 45 balas calibre 10mm de forma instantanea, con una alta chance de que solo te quede un dedo de la mano}
 #====================
 # 11355 to 11405 are tiles! next proto can start at 11406!
 #====================
